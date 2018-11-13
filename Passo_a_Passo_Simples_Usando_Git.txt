@@ -1,0 +1,50 @@
+Envio de documentos via git - GitHub
+
+Configurações básicas
+$ git config --global user.name "[seu nome]"
+$ git config --global user.email [seu e-mail]
+
+#Para ver o caminho e onde está
+$ echo ~ 
+
+#Abra uma pasta em algum lugar e abra algum arquivo vá até esse local com o comando
+$ cd [caminho]
+
+#Para voltar
+$ cd.. 
+
+#Para ver os arquivos dentro das pastas use o comando
+$ ls
+
+#Quando chegar na pasta com o arquivo que deseja subir para o GitHub dê o comando
+$ git init 
+#Para transformar aquela pasta em repositório git
+
+#Veja os repositórios não rastreados com o comando
+$ git status
+
+#Dê um
+$ git add [ nome do arquivo ]
+#Para rastrear ele
+
+#Excute o comando
+git commit -m ["alguma coisa"]
+#Para comentar essa edição
+
+#Veja se o arquvio aparece no rastreamento
+$ git status 
+#O arquivo não deve aparecer mais 
+
+#Ver as terações
+$ git log
+
+#Com a conta git hub criada, o repositório também e você no terminal na pasta do arquivo a subir
+#Aponte seu projeto para o link do git hub
+$ git remote add origin [link do repositório GitHub]
+
+#Envie os arquivos com o comando
+$ git push origin master
+
+#Vá no seu git hub e atualize a página, pronto seu arquvio deve estar lá
+
+# 13/11/2018 :-)
