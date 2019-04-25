@@ -1,13 +1,13 @@
 Envio de documentos via git - GitHub
 
-Configura��es b�sicas
+Configurações básicas
 $ git config --global user.name "[seu nome]"
 $ git config --global user.email [seu e-mail]
 
-#Para ver o caminho e onde est�
+#Para ver o caminho e onde está
 $ echo ~ 
 
-#Abra uma pasta em algum lugar e abra algum arquivo v� at� esse local com o comando
+#Abra uma pasta em algum lugar e abra algum arquivo vá até esse local com o comando
 $ cd [caminho]
 
 #Para voltar
@@ -16,35 +16,82 @@ $ cd..
 #Para ver os arquivos dentro das pastas use o comando
 $ ls
 
-#Quando chegar na pasta com o arquivo que deseja subir para o GitHub d� o comando
-$ git init 
-#Para transformar aquela pasta em reposit�rio git
+#Clone a pasta que será inserida o arquivo no GitHub caso já houver uma pasta lá
+$git clone [link do repositório GitHub]
 
-#Veja os reposit�rios n�o rastreados com o comando
+#Quando chegar na pasta com o arquivo que deseja subir para o GitHub dê o comando
+$ git init 
+#Para transformar aquela pasta em repositório git
+
+#Veja os repositórios não rastreados com o comando
 $ git status
 
-#D� um
+#Dê um
 $ git add [ nome do arquivo ]
 #Para rastrear ele
 
 #Excute o comando
 git commit -m ["alguma coisa"]
-#Para comentar essa edi��o
+#Para comentar essa edição
 
 #Veja se o arquvio aparece no rastreamento
 $ git status 
-#O arquivo n�o deve aparecer mais 
+#O arquivo não deve aparecer mais 
 
-#Ver as tera��es
+#Ver as terações
 $ git log
 
-#Com a conta git hub criada, o reposit�rio tamb�m e voc� no terminal na pasta do arquivo a subir
+#Com a conta git hub criada, o repositório também e você no terminal na pasta do arquivo a subir
 #Aponte seu projeto para o link do git hub
-$ git remote add origin [link do reposit�rio GitHub]
+$ git remote add [nome para atribuir ao log] [link do repositório GitHub]
 
 #Envie os arquivos com o comando
-$ git push origin master
+$ git push [algum nome que não tenha feito um push antes] master
 
-#V� no seu git hub e atualize a p�gina, pronto seu arquvio deve estar l�
+#Vá no seu git hub e atualize a página, pronto seu arquvio deve estar lá
 
-# 13/11/2018 :-)
+******************************************************************************************
+
+#PARA REMOVER ARQUIVOS DO GIT HUB
+
+Configurações básicas
+$ git config --global user.name "[seu nome]"
+$ git config --global user.email [seu e-mail]
+
+#Para ver o caminho e onde está
+$ echo ~ 
+
+#Abra uma pasta em algum lugar e abra algum arquivo vá até esse local com o comando
+$ cd [caminho]
+
+#Para voltar
+$ cd.. 
+
+#Para ver os arquivos dentro das pastas use o comando
+$ ls
+
+#Clone a pasta que será inserida o arquivo no GitHub caso já houver uma pasta lá
+$git clone [link do repositório GitHub]
+
+#Quando chegar na pasta com o arquivo que deseja subir para o GitHub dê o comando
+$ git init 
+#Para transformar aquela pasta em repositório git
+
+#Veja os repositórios não rastreados com o comando
+$ git status
+
+#Primeiro certifique-se que o seu repositório está sincronizado com o repositório remoto
+$ git pull origin master #supondo que o branch seja master#
+
+#Então remova a pasta localmente
+$ git rm -r [nome do arquivo ou pasta]
+
+#Agora faça um commit das modificações:
+$ git commit -m ["alguma coisa"]
+
+#Sincronize com repositório remoto
+$ git push [algum nome que não tenha feito um push antes] master
+
+#Vá no seu git hub e atualize a página, pronto seu arquvio deve esatr removido
+
+# 25/04/2019 :-)
