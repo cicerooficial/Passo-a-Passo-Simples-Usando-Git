@@ -1,0 +1,88 @@
+Criação de repositório via git local empresa
+
+Configurações básicas
+$ git config --global user.name "[seu nome]"
+$ git config --global user.email "[seu e-mail]"
+
+*****************************************************************
+#NAVEGANDO NAS PASTAS
+
+#Abra uma pasta em algum lugar e abra algum arquivo vá até esse local com o comando
+$ cd [caminho]
+
+#Para voltar
+$ cd ..
+
+#Para ver os arquivos dentro das pastas use o comando
+$ ls
+
+*****************************************************************
+#CRIAÇÃO DO REPOSITÓRIO LOCAL
+
+#Criação do primeiro repositório
+$ git init
+
+#Ver o status atual
+$ git status
+
+#Adicionar o arquivo
+$ git add [nome do arquivo]
+
+Exemplo 1 (adiciona todos os arquivo da pasta) : $ git add .
+Exemplo 2 (adiciona apenas extensão css, php, txt, js): $ git add *.css
+
+#Comentar edição
+$ git commit -m ["comentário"]
+
+*****************************************************************
+#ACESSANDO RELATÓRIO DE COMMIT
+
+#Mostra o que foi removido e adicionando
+Exemplo 1 : $ git diff
+Exemplo 2: $ git diff --staged
+
+#O log mostra todos os commit que foi feito no inicio até atualidade
+$ git log
+
+#Interface gráfica (recomendável):
+$ git k
+#Consegue ver os commit mais detalhado
+
+*****************************************************************
+#DESFAZER OU REVERTER
+
+#Adicionar o arquivo
+$ git add .
+
+#Commit a nova alteração
+$ git commit --amend -m ["comentário"]
+
+#Mostra os commit detalhado do autor, data, hora, o que foi feito
+$ git log --pretty=oneline
+
+#Remove o commit na fila de espera
+$ git reset HEAD [nome do arquivo]
+
+#Voltar para versão original
+$ git checkout -- [nome do arquivo]
+
+#O arquivo foi removido ao consultar no git status informa que tem alguns conflitos
+$ git rm [nome do arquivo]
+
+*****************************************************************
+#CRIAR BRANCH (RAMIFICAÇÃO)
+
+#Criando uma branch
+$ git branch [nome do arquivo]
+
+#Entrar na pasta criada
+$ git checkout [nome do arquivo criado]
+
+#Voltar para master produção
+$ git checkout master
+
+#Mesclar
+$ git merge [nome do arquivo]
+
+#Remover branch
+$ git branch -d [nome do arquivo]
